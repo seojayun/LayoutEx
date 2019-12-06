@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+
+    <TableRow>
+        <!--<TableRow> 하나의 행을 의미-->
+        <!--width와 height 가 wrap_content 밖에 없다-->
+<!--        android:layout_weight="1"  버튼을 4개 이상 넣고싶을때-->
+
+        <Button android:text="1"
+            android:layout_weight="1"/>
+        <Button android:text="2"
+            android:layout_weight="1"/>
+        <Button android:text="3"
+            android:layout_weight="1"/>
+        <Button android:text="4"
+            android:layout_weight="1"/>
+        <Button android:text="5"
+            android:layout_weight="1"/>
+    </TableRow>
+
+    <TableRow>
+        <!--android:layout_span="2"  남들공간보다 2배 갖겠다. 3이면 3배-->
+        <Button android:text="1"
+            android:layout_span="2"/>
+        <Button android:text="2" />
+        <Button android:text="3" />
+    </TableRow>
+
+    <TableRow>
+    <!-- android:layout_column="2" 열을 의미 2면 2열-->
+    <Button android:text="1"
+        android:layout_column="2"
+        android:layout_weight="1"/>
+    <Button android:text="2"
+        android:layout_weight="1"/>
+    <Button android:text="3"
+        android:layout_weight="1"/>
+</TableRow>
+
+    <TableRow>
+        <!-- android:stretchColumns="*" 맨위에 이것은 남는 공간을 채워 비율을 맞춰준다
+         숫자를 입력하면 입력한 열을 크기에 맞춰준다. 0행부터 시작-->
+        <Button android:text="1" />
+        <Button android:text="2" />
+        <Button android:text="3" />
+        <Button android:text="4" />
+    </TableRow>
+</TableLayout>
+

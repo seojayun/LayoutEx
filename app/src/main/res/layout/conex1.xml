@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--androidx.constraintlayout.widget.ConstraintLayout 새로나온 레이아웃-->
+    <!--렐러티블 레이아웃을 확장한 개념이다. 특징 : 속성이 엄청 많고 복잡하다.-->
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="버튼1" />
+<!--           android:visibility="gone" 버튼의 공간까지 숨김 -->
+<!--    -->
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="버튼2" />
+    <!-- app:layout_constraintLeft_toRightOf="@id/btn1"
+자신이 자신의 왼쪽부분에 btn1의 오른쪽에 맞닿게 한다.-->
+<!--  app:layout_constraintBottom_toBottomOf="parent"
+   나의 아래쪽을 부모의 아래쪽에 맞닿게 한다.-->
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn1"
+        android:layout_marginLeft="50dp"
+        app:layout_goneMarginLeft="0dp"
+        android:text="버튼3" />
+    <!--app:layout_goneMarginLeft="0dp" marginLeft="50dp"으로 50dp 공간이 있는 상태인데
+     다른 버튼(버튼1)이 보일 경우에는 공간이 확보되고, 없어진 경우, 아예 공간이 줄어든게 된다.-->
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        android:text="버튼4" />
+<!--           app:layout_constraintLeft_toLeftOf="parent"  부모의 왼쪽과 나의 왼쪽붙이고
+        app:layout_constraintRight_toRightOf="parent"       부모의 오른쪽과 나의 오른쪽을 붙이므로
+                                           정중앙에 오게 된다.
+                app:layout_constraintHorizontal_bias="0.56"
+                이것은 해당 수치만큼 오른쪽으로 땡길 수 있다.-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    //   android:orientation="horizontal" 안써도 똑같이 나오지만 써주는 것이좋다.(수직)
+    //    android:orientation="vertical"   (수평)
+    //gravity : 보통 부모가 쓰는 속성(205p~)
+    // layout_gravity : 자식이 쓰는 속성
+    //android:gravity="right" 전체를 오른쪽으로
+    //android:gravity="center" ...중앙...
+    // android:gravity="bottom|right"      | 빽슬레시 동시속성 적용할 수 있다.(오른쪽아래)
+    //android:baselineAligned="false" (207P)  "ture"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="#ff0000"
+        android:gravity="center">
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼1"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="#ffff00"
+        android:gravity="center">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼3"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼4"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#ff00ff"
+        android:orientation="vertical">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼5"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼6"/>
+
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:layout_width="110dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="top|right"-->
+<!--        -->
+<!--        android:text="버튼1"/>-->
+<!--    //android:layout_gravity="right" 해당 버튼만 이동 (하나하나사용시좋음)-->
+<!--    //android:gravity="bottom|right" 버튼또한 부모가 되서 글씨만 이동도 가능하다.-->
+<!--    //즉 자식속성인 버튼에도 또다른 자식속성(텍스트) 로 가능하다.-->
+<!--    <Button-->
+<!--        android:layout_width="110dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:gravity="left|center"-->
+<!--        android:text="버튼2"/>-->
+<!--    <Button-->
+<!--        android:layout_width="110dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_gravity="right"-->
+<!--        android:gravity="right|bottom"-->
+<!--        android:text="버튼3"/>-->
+
+
+
+
+
+
+</LinearLayout>
+
+
+<!--// 직접풀어보기 5-1 (206p)  -->
+<!--<Button-->
+<!--android:layout_width="100dp"-->
+<!--android:layout_height="100dp"-->
+<!--android:layout_gravity="center"-->
+<!--android:gravity="top|right"-->
+<!--android:text="버튼1"/>-->
+<!--<Button-->
+<!--android:layout_width="100dp"-->
+<!--android:layout_height="100dp"-->
+<!--android:gravity="left|center"-->
+<!--android:text="버튼2"/>-->
+<!--<Button-->
+<!--android:layout_width="100dp"-->
+<!--android:layout_height="100dp"-->
+<!--android:layout_gravity="right"-->
+<!--android:gravity="right|bottom"-->
+<!--android:text="버튼3"/>-->
+
+
+<!--가중치  weight -->
+<!--//    android:orientation="horizontal"  수직으로 놓고-->
+<!--//android:layout_weight="숫자비율"  비율을 정하는 기능!!매우 중요하다-->
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:text="버튼4"/>-->
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:text="버튼5"/>-->
+
+
+<!--첫 버튼을  android:layout_width="match_parent"로 놓고 두번째버튼을"wrap_content"로
+ 두면 첫번째 버튼이 공간을 다 차지한다.-->
+<!--즉 비율을 주고 싶을때에는 -->
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+
+<!--android:text="버튼4"/>-->
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+
+<!--android:text="버튼5"/>-->
+
+
+<!--중복 리니어레이아웃 형태(207p)  핵심은 비율 잘 맞추기 등-->
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:orientation="vertical"-->
+<!--android:layout_weight="1"-->
+<!--android:gravity="center">-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼1"/>-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼2"/>-->
+
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_weight="1"-->
+<!--android:gravity="center">-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼3"/>-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼4"/>-->
+
+
+<!--</LinearLayout>-->
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:gravity="center"-->
+<!--android:layout_weight="1"-->
+<!--android:orientation="vertical">-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼5"/>-->
+<!--<Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="버튼6"/>-->
+
+
+<!--</LinearLayout>-->

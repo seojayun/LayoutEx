@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:rowCount="2"
+    android:columnCount="5">
+<!--    rowCount 행 columnCount 열  내가 마음대로 열 행을 만들고 시작할 수 있다.-->
+
+    <Button
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_rowSpan="2"
+        android:layout_gravity="fill_vertical"
+        android:text="1"/>
+<!--    0행 0열에 1을 집어넣는다. 버튼으로-->
+<!--  android:layout_gravity="fill_vertical" 수직으로 다 차지함  -->
+    <!--    android:layout_rowSpan="2"  행을 2개 차지함-->
+<!--    전체를 다 차지하는 이유는 부모의 높이가 전체(match_parent) 이기 때문-->
+    <Button
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="2"/>
+<!--  android:layout_gravity="fill_horizontal" 수평으로 다 차지함  -->
+<!--    android:layout_columnSpan="2"  열을 2개 차지함-->
+    <Button
+        android:layout_row="0"
+        android:layout_column="3"
+        android:text="3"/>
+    <Button
+        android:layout_row="0"
+        android:layout_column="4"
+        android:layout_width="30dp"
+        android:text="4"/>
+<!--    리니어레이아웃이 부모가 아니므로 android:layout_weight="1" 사용불가-->
+<!--   android:layout_width="30dp" 이렇게 직접 맞춰야 한다. -->
+    <Button
+        android:layout_row="1"
+        android:layout_column="1"
+        android:text="5"/>
+    <Button
+        android:layout_row="1"
+        android:layout_column="2"
+        android:text="6"/>
+
+    <Button
+        android:layout_row="1"
+        android:layout_column="3"
+        android:text="7"/>
+
+</GridLayout>
